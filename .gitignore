@@ -1,0 +1,38 @@
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.log
+
+# Virtual environment
+venv/
+.env/
+.env.*
+
+# SQLite / DB
+*.sqlite3
+*.db
+*.db-journal
+
+# --- IDE ---
+# PyCharm
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# --- OS ---
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+desktop.ini
+
+# --- Packaging ---
+*.egg-info/
+dist/
+build/
+.eggs/
