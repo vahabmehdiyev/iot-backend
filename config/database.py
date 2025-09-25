@@ -1,5 +1,6 @@
 from collections.abc import AsyncGenerator
 from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
+from sqlalchemy.orm import declarative_base
 
 DATABASE_URL = "postgresql+asyncpg://app_user:merdekan454@127.0.0.1:55432/iotdb"
     # DATABASE_URL = "postgresql+asyncpg://app_user:merdekan454@127.0.0.1:5432/iotdb"
@@ -12,6 +13,8 @@ SessionLocal = async_sessionmaker(
     expire_on_commit=False,
     autoflush=False,
 )
+
+Base = declarative_base()
 
 async def get_db() -> AsyncGenerator[AsyncSession, None]:
     async with SessionLocal() as session:
