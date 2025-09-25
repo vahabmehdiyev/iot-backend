@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from config.database import get_db
-from .device_service import get_devices
+from api.device.device_service import get_devices
 
 router = APIRouter(prefix="/device", tags=["device"])
 
